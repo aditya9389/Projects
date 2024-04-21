@@ -38,8 +38,22 @@ public class Server extends JFrame implements ActionListener {
         Image i8 =i7.getImage().getScaledInstance(30,30,Image.SCALE_DEFAULT);
         i7= new ImageIcon(i8);
         JLabel video = new JLabel(i7);
-        video.setBounds(300,20,50,50);
+        video.setBounds(300,20,30,30);
         p1.add(video);
+
+        ImageIcon i9= new ImageIcon(ClassLoader.getSystemResource("icons/phone.png"));
+        Image i10 =i9.getImage().getScaledInstance(35,30,Image.SCALE_DEFAULT);
+        i9= new ImageIcon(i10);
+        JLabel phone = new JLabel(i9);
+        phone.setBounds(360,20,35,30);
+        p1.add(phone);
+
+        ImageIcon i11= new ImageIcon(ClassLoader.getSystemResource("icons/3icon.png"));
+        Image i12 =i11.getImage().getScaledInstance(10,25,Image.SCALE_DEFAULT);
+        i11= new ImageIcon(i12);
+        JLabel  morevert= new JLabel(i11);
+        morevert.setBounds(410,20,10,25);
+        p1.add(morevert);
 
         setSize(450,700);
         setLocation(200,50);
