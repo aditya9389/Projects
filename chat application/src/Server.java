@@ -55,14 +55,42 @@ public class Server extends JFrame implements ActionListener {
         morevert.setBounds(410,20,10,25);
         p1.add(morevert);
 
-        setSize(450,700);
+        JLabel name= new JLabel("Gaitonde");
+        name.setBounds(110,15,100,25);
+        name.setForeground(Color.WHITE);
+        name.setFont(new Font("SAN_SERIF",Font.BOLD,14));
+        p1.add(name);
+
+        JLabel status= new JLabel("Active Now");
+        status.setBounds(110,35,100,20);
+        status.setForeground(Color.WHITE);
+        status.setFont(new Font("SAN_SERIF",Font.BOLD,8));
+        p1.add(status);
+
+        JPanel a1= new JPanel();
+        a1.setBounds(5,75,425,500);
+        add(a1);
+
+        JTextField text= new JTextField();
+        text.setBounds(5,580,310,40);
+        text.setFont(new Font("SAN_SERIF",Font.PLAIN,16));
+        add(text);
+
+        JButton send = new JButton("send");
+        send.setBounds(320,582,110,36);
+        send.setBackground(new Color(7,94,84));
+        send.setForeground(Color.WHITE);
+        add(send);
+
+        setSize(450,660);
         setLocation(200,50);
-        getContentPane().setBackground(Color.green);
+        getContentPane().setBackground(Color.white);
 
         setVisible(true);
     }
     public static void main(String[] args)
     {
+
         new Server();
     }
 
