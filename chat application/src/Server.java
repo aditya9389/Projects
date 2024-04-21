@@ -28,11 +28,18 @@ public class Server extends JFrame implements ActionListener {
             }
         });
         ImageIcon i4= new ImageIcon(ClassLoader.getSystemResource("icons/1.png"));
-        Image i5 =i4.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT);
+        Image i5 =i4.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
         i4= new ImageIcon(i5);
         JLabel pro = new JLabel(i4);
         pro.setBounds(30,10,50,50);
         p1.add(pro);
+
+        ImageIcon i7= new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
+        Image i8 =i7.getImage().getScaledInstance(30,30,Image.SCALE_DEFAULT);
+        i7= new ImageIcon(i8);
+        JLabel video = new JLabel(i7);
+        video.setBounds(300,20,50,50);
+        p1.add(video);
 
         setSize(450,700);
         setLocation(200,50);
