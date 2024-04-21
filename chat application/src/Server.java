@@ -31,7 +31,7 @@ public class Server extends JFrame implements ActionListener {
         Image i5 =i4.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
         i4= new ImageIcon(i5);
         JLabel pro = new JLabel(i4);
-        pro.setBounds(30,10,50,50);
+        pro.setBounds(40,10,50,50);
         p1.add(pro);
 
         ImageIcon i7= new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
@@ -45,7 +45,7 @@ public class Server extends JFrame implements ActionListener {
         Image i10 =i9.getImage().getScaledInstance(35,30,Image.SCALE_DEFAULT);
         i9= new ImageIcon(i10);
         JLabel phone = new JLabel(i9);
-        phone.setBounds(360,20,35,30);
+        phone.setBounds(350,20,35,30);
         p1.add(phone);
 
         ImageIcon i11= new ImageIcon(ClassLoader.getSystemResource("icons/3icon.png"));
