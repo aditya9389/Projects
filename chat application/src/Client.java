@@ -5,13 +5,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Client extends JFrame implements ActionListener {
+    static DataOutputStream dout;
     JTextField text;
-    JPanel a1;
-    Box vertical =Box.createVerticalBox();
+     static JPanel a1;
+    static Box vertical =Box.createVerticalBox();
     Client(){
         setLayout(null);
 
@@ -98,6 +102,28 @@ public class Client extends JFrame implements ActionListener {
     public static void main(String[] args)
     {
         new Client();
+
+        try{
+            Socket s= new Socket("127.0.0.1",6001);
+            DataInputStream din = new DataInputStream(s.getInputStream());
+            dout= new DataOutputStream(s.getOutputStream());
+            while(true)
+            {
+                a1.setLayout(new BorderLayout());
+                String msg=din.readUTF();
+                JPanel panel = formatLabel(msg);
+                JPanel left= new JPanel(new BorderLayout());
+                left.add(panel,BorderLayout.LINE_START);
+                vertical.add(left);
+                vertical.add(Box.createVerticalStrut(15));
+                a1.add(vertical,BorderLayout.PAGE_START);
+                f.validate();
+
+            }
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
