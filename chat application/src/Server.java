@@ -1,25 +1,32 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.net.*;
 
-public class Server extends JFrame implements ActionListener {
+public class Server implements ActionListener {
+    static DataOutputStream dout;
     JTextField text;
     JPanel a1;
-    Box vertical =Box.createVerticalBox();
+    static Box vertical =Box.createVerticalBox();
+    static JFrame f= new JFrame();
     Server(){
-        setLayout(null);
+        f.setLayout(null);
 
         JPanel p1= new JPanel();
         p1.setBackground(new Color(7,94,84));
         p1.setBounds(0,0,450,70);
         p1.setLayout(null);
-        add(p1);
+        f.add(p1);
 
         ImageIcon i1= new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
         Image i2 =i1.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT);
@@ -75,29 +82,53 @@ public class Server extends JFrame implements ActionListener {
 
         a1= new JPanel();
         a1.setBounds(5,75,425,500);
-        add(a1);
+        f.add(a1);
 
         text= new JTextField();
         text.setBounds(5,580,310,40);
         text.setFont(new Font("SAN_SERIF",Font.PLAIN,16));
-        add(text);
+        f.add(text);
 
         JButton send = new JButton("send");
         send.setBounds(320,582,110,36);
         send.setBackground(new Color(7,94,84));
         send.addActionListener(this);
         send.setForeground(Color.WHITE);
-        add(send);
+        f.add(send);
 
-        setSize(450,660);
-        setLocation(200,50);
-        getContentPane().setBackground(Color.white);
+        f.setSize(450,660);
+        f.setLocation(200,50);
+        f.getContentPane().setBackground(Color.white);
 
-        setVisible(true);
+        f.setVisible(true);
     }
     public static void main(String[] args)
     {
         new Server();
+        try{
+            ServerSocket skt= new ServerSocket(6001);
+            while(true)
+            {
+                Socket s= skt.accept();
+                DataInputStream din = new DataInputStream(s.getInputStream());
+                dout= new DataOutputStream(s.getOutputStream());
+
+                while(true)
+                {
+                    String msg=din.readUTF();
+                    JPanel panel = formatLabel(msg);
+                    JPanel left= new JPanel(new BorderLayout());
+                    left.add(panel,BorderLayout.LINE_START);
+                    vertical.add(left);
+                    f.validate();
+
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -112,10 +143,16 @@ public class Server extends JFrame implements ActionListener {
         vertical.add(Box.createVerticalStrut(15));
         a1.add(vertical,BorderLayout.PAGE_START);
 
+        try {
+            dout.writeUTF(out);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         text.setText("");
-        repaint();
-        invalidate();
-        validate();
+
+        f.repaint();
+        f.invalidate();
+        f.validate();
     }
     public static JPanel formatLabel(String out){
     JPanel panel= new JPanel();
