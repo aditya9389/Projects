@@ -6,6 +6,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Server extends JFrame implements ActionListener {
+    JTextField text;
+    JPanel a1;
+    Box vertical =Box.createVerticalBox();
     Server(){
         setLayout(null);
 
@@ -67,11 +70,11 @@ public class Server extends JFrame implements ActionListener {
         status.setFont(new Font("SAN_SERIF",Font.BOLD,8));
         p1.add(status);
 
-        JPanel a1= new JPanel();
+        a1= new JPanel();
         a1.setBounds(5,75,425,500);
         add(a1);
 
-        JTextField text= new JTextField();
+        text= new JTextField();
         text.setBounds(5,580,310,40);
         text.setFont(new Font("SAN_SERIF",Font.PLAIN,16));
         add(text);
@@ -79,6 +82,7 @@ public class Server extends JFrame implements ActionListener {
         JButton send = new JButton("send");
         send.setBounds(320,582,110,36);
         send.setBackground(new Color(7,94,84));
+        send.addActionListener(this);
         send.setForeground(Color.WHITE);
         add(send);
 
@@ -90,12 +94,33 @@ public class Server extends JFrame implements ActionListener {
     }
     public static void main(String[] args)
     {
-
         new Server();
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
+    public void actionPerformed(ActionEvent ae)
+    {
+        String out=text.getText();
+        JPanel p2= formatLabel(out);
+        a1.setLayout(new BorderLayout());
+        JPanel right= new JPanel(new BorderLayout());
+        right.add(p2,BorderLayout.LINE_END);
+        vertical.add(right);
+        vertical.add(Box.createVerticalStrut(15));
+        a1.add(vertical,BorderLayout.PAGE_START);
 
+        repaint();
+        invalidate();
+        validate();
     }
+    public static JPanel formatLabel(String out){
+    JPanel panel= new JPanel();
+    panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
+    JLabel output= new JLabel(out);
+    output.setFont(new Font("Tahoma",Font.PLAIN,16));
+    output.setBackground(new Color(37,211,102));
+    panel.add(output);
+    return panel;
+    }
+
 }
