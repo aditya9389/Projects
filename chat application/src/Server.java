@@ -1,9 +1,12 @@
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Server extends JFrame implements ActionListener {
     JTextField text;
@@ -109,6 +112,7 @@ public class Server extends JFrame implements ActionListener {
         vertical.add(Box.createVerticalStrut(15));
         a1.add(vertical,BorderLayout.PAGE_START);
 
+        text.setText("");
         repaint();
         invalidate();
         validate();
@@ -116,10 +120,23 @@ public class Server extends JFrame implements ActionListener {
     public static JPanel formatLabel(String out){
     JPanel panel= new JPanel();
     panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
-    JLabel output= new JLabel(out);
+
+    JLabel output= new JLabel("<html><p style=\"width:150px\">" + out + "</p></html>");
     output.setFont(new Font("Tahoma",Font.PLAIN,16));
+    output.setOpaque(true);
+    output.setBorder(new EmptyBorder(15,15,15,50));
     output.setBackground(new Color(37,211,102));
-    panel.add(output);
+
+        Calendar cal=Calendar.getInstance();
+        SimpleDateFormat sdf= new SimpleDateFormat("HH:mm");
+
+        JLabel time= new JLabel();
+        time.setText(sdf.format(cal.getTime()));
+
+        panel.add(output);
+        panel.add(time);
+
+
     return panel;
     }
 
