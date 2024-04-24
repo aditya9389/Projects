@@ -7,23 +7,25 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Client extends JFrame implements ActionListener {
+public class Client  implements ActionListener {
+    static JFrame f= new JFrame();
     static DataOutputStream dout;
     JTextField text;
      static JPanel a1;
     static Box vertical =Box.createVerticalBox();
     Client(){
-        setLayout(null);
+        f.setLayout(null);
 
         JPanel p1= new JPanel();
         p1.setBackground(new Color(7,94,84));
         p1.setBounds(0,0,450,70);
         p1.setLayout(null);
-        add(p1);
+        f.add(p1);
 
         ImageIcon i1= new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
         Image i2 =i1.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT);
@@ -79,25 +81,25 @@ public class Client extends JFrame implements ActionListener {
 
         a1= new JPanel();
         a1.setBounds(5,75,425,500);
-        add(a1);
+        f.add(a1);
 
         text= new JTextField();
         text.setBounds(5,580,310,40);
         text.setFont(new Font("SAN_SERIF",Font.PLAIN,16));
-        add(text);
+        f.add(text);
 
         JButton send = new JButton("send");
         send.setBounds(320,582,110,36);
         send.setBackground(new Color(7,94,84));
         send.addActionListener(this);
         send.setForeground(Color.WHITE);
-        add(send);
+        f.add(send);
 
-        setSize(450,660);
-        setLocation(800,50);
-        getContentPane().setBackground(Color.white);
+        f.setSize(450,660);
+        f.setLocation(800,50);
+        f.getContentPane().setBackground(Color.white);
 
-        setVisible(true);
+        f.setVisible(true);
     }
     public static void main(String[] args)
     {
@@ -137,11 +139,15 @@ public class Client extends JFrame implements ActionListener {
         vertical.add(right);
         vertical.add(Box.createVerticalStrut(15));
         a1.add(vertical,BorderLayout.PAGE_START);
-
+        try {
+            dout.writeUTF(out);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         text.setText("");
-        repaint();
-        invalidate();
-        validate();
+        f.repaint();
+        f.invalidate();
+        f.validate();
     }
     public static JPanel formatLabel(String out){
         JPanel panel= new JPanel();

@@ -146,7 +146,7 @@ public class Server implements ActionListener {
         try {
             dout.writeUTF(out);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         text.setText("");
 
