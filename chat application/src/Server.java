@@ -40,7 +40,7 @@ public class Server implements ActionListener {
                 System.exit(0);
             }
         });
-        ImageIcon i4= new ImageIcon(ClassLoader.getSystemResource("icons/1.png"));
+        ImageIcon i4= new ImageIcon(ClassLoader.getSystemResource("icons/1.jpg"));
         Image i5 =i4.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
         i4= new ImageIcon(i5);
         JLabel pro = new JLabel(i4);
@@ -68,7 +68,7 @@ public class Server implements ActionListener {
         morevert.setBounds(410,20,10,25);
         p1.add(morevert);
 
-        JLabel name= new JLabel("Gaitonde");
+        JLabel name= new JLabel("Server");
         name.setBounds(110,15,100,25);
         name.setForeground(Color.WHITE);
         name.setFont(new Font("SAN_SERIF",Font.BOLD,14));
