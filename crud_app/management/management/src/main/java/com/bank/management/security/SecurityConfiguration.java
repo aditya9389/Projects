@@ -29,6 +29,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable()) // ✅ Updated CSRF Disable Method
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/",
                                 "/auth/**",
                                 "/transaction/**",
                                 "/v2/api-docs",
@@ -53,17 +54,17 @@ public class SecurityConfiguration {
         return http.build();
     }
 
-    // ✅ This method was missing! It correctly defines CORS settings.
+    // Enhanced CORS settings with specific origins and headers
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("*")); // Allow all origins (change if needed)
-        config.setAllowedHeaders(List.of("*")); // Allow all headers
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allow HTTP methods
+        config.setAllowedOrigins(List.of("http://localhost:4200")); // Allowing only frontend to access (modify if necessary)
+        config.setAllowedHeaders(List.of("*")); // Allowing all headers (you can narrow this down if needed)
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allowing necessary HTTP methods
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
+        source.registerCorsConfiguration("/**", config); // Apply CORS settings to all routes
         return source;
     }
 }
