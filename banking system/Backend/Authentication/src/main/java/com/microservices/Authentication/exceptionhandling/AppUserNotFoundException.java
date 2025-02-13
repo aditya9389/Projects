@@ -1,4 +1,19 @@
 package com.microservices.Authentication.exceptionhandling;
 
-public class AppUserNotFoundException {
+//Class for APPUSER is not found in DB
+public class AppUserNotFoundException extends Exception
+{
+    private static final long serialVersionUID = 1L;
+
+    public AppUserNotFoundException()
+    {
+        super();
+        //Empty Constructor
+    }
+
+    public AppUserNotFoundException(final String message)
+    {
+        //Constructor for AppUserNotFoundException
+        super(message);
+    }
 }

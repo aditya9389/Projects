@@ -1,4 +1,20 @@
 package com.microservices.Authentication.errorhandling;
+import java.time.LocalDateTime;
 
-public class ErrorMessage {
+import org.springframework.http.HttpStatus;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ErrorMessage
+{
+    private HttpStatus status;
+    private LocalDateTime timestamp;
+    private String message;
 }

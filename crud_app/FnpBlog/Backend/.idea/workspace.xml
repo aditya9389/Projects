@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2dbf64c9-fdbf-47e4-8e87-84dd82eb96b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/errorhandling/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/exceptionhandling/AppUserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/exceptionhandling/ControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/model/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/model/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/securityconfig/SecurityConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/service/CustomerDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/service/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/service/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/src/main/java/com/microservices/Authentication/service/Validationservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Authentication/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../banking system/Backend/Authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bank.management.system/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bank.management.system/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bank.management.system/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bank.management.system/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bank.management.system/.idea/workspace.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2svZnNmiVt3pJWILn0RMlawLX70" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dbf64c9-fdbf-47e4-8e87-84dd82eb96b7" name="Changes" comment="" />
+      <created>1739338176454</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739338176454</updated>
+    </task>
+    <servers />
+  </component>
+</project>

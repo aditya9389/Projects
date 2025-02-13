@@ -1,4 +1,11 @@
 package com.microservices.Authentication.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class UserRepository {
+import com.microservices.Authentication.model.AppUser;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<AppUser, String> {
+
 }
