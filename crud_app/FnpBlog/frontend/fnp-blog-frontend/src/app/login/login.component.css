@@ -1,0 +1,75 @@
+/* Centering the whole login container */
+h2{
+    text-align: center
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything inside */
+    justify-content: center;
+    height: 45vh; /* Full page height */
+  }
+  
+  /* Styling for form */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for inputs */
+  input {
+    width: 93%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+  }
+  
+  .login-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Register Button */
+  .register-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #28a745;
+    color: white;
+  }
+  
+  .register-btn:hover {
+    background: #218838;
+  }
+  
+  /* Message styling */
+  p {
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  

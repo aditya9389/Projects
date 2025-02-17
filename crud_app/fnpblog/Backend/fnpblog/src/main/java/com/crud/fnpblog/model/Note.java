@@ -1,5 +1,6 @@
 package com.crud.fnpblog.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -25,6 +26,6 @@ public class Note {
 
     @ManyToOne
     @JoinColumn(name = "user_Id", referencedColumnName = "userId", nullable = false)    //first user_id will get created for note entity
-    @JsonIgnore
+    @JsonBackReference
     private User user;
 }

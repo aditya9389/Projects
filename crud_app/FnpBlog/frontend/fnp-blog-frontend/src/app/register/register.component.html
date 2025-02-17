@@ -1,0 +1,18 @@
+<h2>Register</h2>
+
+<div class="login-container">
+  <form (submit)="onRegister()">
+    <input type="text" [(ngModel)]="username" placeholder="Enter username" name="username" required>
+    <input type="text" [(ngModel)]="empId" placeholder="Enter empId" name="empId" required>
+    <input type="password" [(ngModel)]="password" placeholder="Enter password" name="password" required>
+    <button type="submit" class="login-btn">Submit</button>
+  </form>
+  <p *ngIf="message">{{ message }}</p>
+  <!-- Register button inside container for proper alignment -->
+   
+   <form (submit)="goTologin()">
+    <p>already registered?</p>
+    <button type="submit" class="register-btn">Login</button>
+  </form>
+
+</div>

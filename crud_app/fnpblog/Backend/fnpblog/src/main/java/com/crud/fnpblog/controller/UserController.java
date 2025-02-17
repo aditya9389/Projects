@@ -1,33 +1,40 @@
 package com.crud.fnpblog.controller;
 
+import com.crud.fnpblog.dto.AuthResponse;
 import com.crud.fnpblog.dto.LoginRequest;
 import com.crud.fnpblog.dto.UpdatePasswordRequest;
 import com.crud.fnpblog.model.User;
+import com.crud.fnpblog.repository.UserRepository;
 import com.crud.fnpblog.services.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
+@RequiredArgsConstructor
 public class UserController {
+
+    private final UserRepository userRepository;
     private final UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
-    @PostMapping("/register")
+    @PostMapping(value = "/register", consumes = "application/json;charset=UTF-8")
     public ResponseEntity<User> registerUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.registerUser(user));
     }
 
+
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody LoginRequest loginRequest) {
-        Optional<User> user = userService.loginUser(loginRequest.getUsername(), loginRequest.getPassword());
-        return user.isPresent() ? ResponseEntity.ok("Login successful!") : ResponseEntity.status(401).body("Invalid credentials");
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest loginRequest) {
+        return ResponseEntity.ok(userService.loginUser(loginRequest.getUsername(), loginRequest.getPassword()));
     }
+
 
     // Update password endpoint using JSON
     @PutMapping("/update-password")

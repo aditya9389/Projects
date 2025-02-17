@@ -2,6 +2,7 @@ package com.crud.fnpblog.controller;
 
 import com.crud.fnpblog.model.Note;
 import com.crud.fnpblog.services.NoteService;
+import org.apache.tomcat.util.http.parser.Authorization;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,9 +19,9 @@ public class NoteController {
         this.noteService = noteService;
     }
 
-    @GetMapping("/getNote/{username}")
-    public ResponseEntity<List<Note>> getUserNotes(@PathVariable String username) {
-        return ResponseEntity.ok(noteService.getNotesByUser(username));
+    @GetMapping("/getNotes")
+    public ResponseEntity<List<Note>> getUserNotesByToken(@RequestHeader("Authorization") String token) {
+        return ResponseEntity.ok(noteService.getNotesByToken(token));
     }
 
     @PostMapping("/createNote/{username}")

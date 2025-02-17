@@ -4,24 +4,33 @@ import com.crud.fnpblog.model.Note;
 import com.crud.fnpblog.model.User;
 import com.crud.fnpblog.repository.NoteRepository;
 import com.crud.fnpblog.repository.UserRepository;
+import com.crud.fnpblog.security.JwtUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
 
+@RequiredArgsConstructor
 @Service
+
 public class NoteService {
     private final NoteRepository noteRepository;
     private final UserRepository userRepository;
+    private final JwtUtil jwtUtil;
 
-    public NoteService(NoteRepository noteRepository, UserRepository userRepository) {
-        this.noteRepository = noteRepository;
-        this.userRepository = userRepository;
+    public List<Note> getNotesByToken(String token)
+    {
+        String jwt=token.substring(7);
+        System.out.println("token given in getnotesbytoken start:"+jwt);
+        String username=jwtUtil.extractUsername(jwt);
+        System.out.println("username extracted through jwtutil again in getnotesbytoken:"+username);
+        return this.getNotesByUser(username);
     }
 
     public List<Note> getNotesByUser(String username) {
+        System.out.println(username);
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found by this username"));
+        System.out.println("user given by findbyuser in getnotesbyusername"+user.toString());
         return noteRepository.findByUser(user);
     }
     public List<Note> getNotesByUserId(Long userId) {

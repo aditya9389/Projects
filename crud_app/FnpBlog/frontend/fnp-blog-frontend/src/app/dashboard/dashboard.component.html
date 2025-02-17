@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Your Notes</h2>
+  
+    <!-- Button to Fetch Notes -->
+    <button (click)="getNotes()" class="fetch-btn">Fetch Notes</button>
+  
+    <div *ngIf="notes.length === 0 && notesFetched" class="no-notes">
+      No notes found.
+    </div>
+  
+    <div *ngFor="let note of notes" class="note-card">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.content }}</p>
+    </div>
+  
+    <!-- Logout Button -->
+    <button (click)="logout()" class="logout-btn">Logout</button>
+  </div>
+  

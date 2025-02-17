@@ -1,32 +1,41 @@
 package com.crud.fnpblog.services;
 
+import com.crud.fnpblog.dto.AuthResponse;
 import com.crud.fnpblog.model.User;
 import com.crud.fnpblog.repository.UserRepository;
+import com.crud.fnpblog.security.JwtUtil;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
-public class UserService {
+@RequiredArgsConstructor
+public class UserService  {
+    private final AuthenticationManager authenticationManager;
+    private final JwtUtil jwtUtil;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
-    public Optional<User> loginUser(String username, String password) {
-        Optional<User> user = userRepository.findByUsername(username);
-        if (user.isPresent() && passwordEncoder.matches(password, user.get().getPassword())) {
-            return user;
-        }
-        return Optional.empty();
+    public AuthResponse loginUser(String username, String password) {
+
+        //Authenticate user using Spring Security
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        //Generate JWT Token
+        String token = jwtUtil.generateToken(user.getUsername());
+
+        return new AuthResponse(token);
     }
 
     public void updatePassword(Long userId, String newPassword) {
