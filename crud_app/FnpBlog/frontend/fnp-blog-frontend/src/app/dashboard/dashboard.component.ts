@@ -45,4 +45,7 @@ export class DashboardComponent {
     this.authservice.removeToken();
     this.router.navigate(['/login']);
   }
+    createNote(){
+      this.router.navigate(['/createNote']);
+    }
 }

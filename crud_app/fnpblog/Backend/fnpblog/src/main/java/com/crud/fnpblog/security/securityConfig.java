@@ -1,6 +1,6 @@
 package com.crud.fnpblog.security;
 
-import com.crud.fnpblog.services.CustomUserDetailsService;
+import com.crud.fnpblog.services.custom.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,14 +34,23 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csfr -> csfr.disable())
+                .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/users/register", "/api/users/login","/api/notes/createNote").permitAll()
-                        .anyRequest().authenticated())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/users/register", "/api/users/login", "/api/notes/createNote").permitAll()
+                        .requestMatchers("/oauth2/**", "/login/oauth2/**").permitAll() // Allow Google OAuth2 endpoints
+                        .anyRequest().authenticated()
+                )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .oauth2Login(oauth2 -> oauth2
+                        .defaultSuccessUrl("/api/users/oauth2/success", true) // Redirect after successful login
+                        .failureUrl("/api/users/oauth2/failure") // Redirect on failure
+                )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
     }
+
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {

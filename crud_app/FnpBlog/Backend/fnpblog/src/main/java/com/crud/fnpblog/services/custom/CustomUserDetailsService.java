@@ -1,4 +1,4 @@
-package com.crud.fnpblog.services;
+package com.crud.fnpblog.services.custom;
 
 import com.crud.fnpblog.model.User;
 import com.crud.fnpblog.repository.UserRepository;
@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 

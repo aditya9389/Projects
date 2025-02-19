@@ -11,6 +11,7 @@ import com.crud.fnpblog.dto.CustomProvider;
 @Getter
 @Setter
 @Entity
+@Table(name="Google_Users")
 public class Google_Login {
 
     @Id
@@ -18,7 +19,10 @@ public class Google_Login {
     private String User_Login_Id;
 
     @Column
-    private String Username;
+    private String username;
+
+    @Column(unique = true,nullable = false)
+    private String Email;
 
     @Column
     private String Current_Password;
@@ -38,7 +42,6 @@ public class Google_Login {
     @Column
     @Enumerated(EnumType.STRING)
     private OAuth2ClientProperties.Provider provider;
-
 //    private String authorizationUri;
 //    private String tokenUri;
 //    private String userInfoUri;
