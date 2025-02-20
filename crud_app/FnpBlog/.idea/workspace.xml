@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57552389-7a2f-47b0-99be-758e32f77da0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/DockerFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.config.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/googleLogin.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/services/auth.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/services/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/main.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;aditya9389&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/aditya9389/Projects.git&quot;,
+    &quot;accountId&quot;: &quot;8df3033f-2895-4df4-a6ea-62a1f849c301&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2svZsmMLL3vbGQWsyOL7oPI1pxT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.FnpblogApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57552389-7a2f-47b0-99be-758e32f77da0" name="Changes" comment="" />
+      <created>1739338219060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739338219060</updated>
+    </task>
+    <task id="LOCAL-00001" summary="google login">
+      <option name="closed" value="true" />
+      <created>1739863487021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739863487021</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="google login" />
+    <option name="LAST_COMMIT_MESSAGE" value="google login" />
+  </component>
+</project>
