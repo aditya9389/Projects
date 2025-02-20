@@ -1,5 +1,7 @@
 package com.crud.fnpblog.security;
 
+import com.crud.fnpblog.controller.GoogleController;
+import com.crud.fnpblog.services.custom.CustomOAuth2UserService;
 import com.crud.fnpblog.services.custom.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -25,6 +27,9 @@ public class SecurityConfig {
 
     private final JwtFilter jwtFilter;
     private final CustomUserDetailsService userDetailsService;
+    private final CustomOAuth2UserService customOAuth2UserService;
+    private final GoogleController googleController;
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -43,8 +48,8 @@ public class SecurityConfig {
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .oauth2Login(oauth2 -> oauth2
-                        .defaultSuccessUrl("/api/users/oauth2/success", true) // Redirect after successful login
-                        .failureUrl("/api/users/oauth2/failure") // Redirect on failure
+                        .userInfoEndpoint(userInfo -> userInfo.userService(customOAuth2UserService)) // Updated way to set OAuth2 service
+                        .successHandler(googleController) // Custom success handler
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 

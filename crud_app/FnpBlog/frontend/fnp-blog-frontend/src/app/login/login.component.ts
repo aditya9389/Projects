@@ -4,7 +4,7 @@ import { LoginService } from './login.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-
+import { GoogleLoginService } from './googleLogin.service';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -18,7 +18,11 @@ export class LoginComponent {
   password = '';
   message = '';
 
-  constructor(private authService: AuthService ,private loginService: LoginService, private router: Router) {}
+  constructor(
+     private authService: AuthService 
+    ,private loginService: LoginService
+    ,private router: Router
+    ,private googleLoginService:GoogleLoginService) {}
 
   onLogin() {
     this.loginService.login(this.username, this.password).subscribe({
@@ -43,5 +47,8 @@ export class LoginComponent {
   }
   goToDashboard() {
     this.router.navigate(['/dashboard']); 
+  }
+  goToGoogleReg() {
+    this.googleLoginService.googleLogin(); 
   }
 }

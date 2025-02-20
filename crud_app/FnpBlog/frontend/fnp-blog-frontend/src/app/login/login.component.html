@@ -9,6 +9,10 @@
   <p *ngIf="message">{{ message }}</p>
   <!-- Register button inside container for proper alignment -->
    
+  <form (submit)="goToGoogleReg()">
+    <button type="submit" class="register-btn">Register with Google</button>
+  </form>
+
    <form (submit)="goToReg()">
     <p>new user register here</p>
     <button type="submit" class="register-btn">Register</button>

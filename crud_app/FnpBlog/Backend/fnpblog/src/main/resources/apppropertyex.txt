@@ -1,0 +1,24 @@
+As because app properties contains google client id and secret it cant get uploaded in GitHub so giving link... stay connected with Aditya to learn further
+
+below is the required code
+
+************************
+
+spring.application.name=fnpblog
+spring.datasource.url=jdbc:mysql://localhost:3306/fnpblog
+spring.datasource.username=root
+spring.datasource.password=Adii@9389
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+
+#spring.security.oauth2.client.registration.google.client-id=
+#spring.security.oauth2.client.registration.google.client-secret=
+#spring.security.oauth2.client.registration.google.scope=profile,email
+#spring.security.oauth2.client.registration.google.redirect-uri={baseUrl}/login/oauth2/code/google
+#spring.security.oauth2.client.provider.google.authorization-uri=https://accounts.google.com/o/oauth2/v2/auth
+#spring.security.oauth2.client.provider.google.token-uri=https://oauth2.googleapis.com/token
+#spring.security.oauth2.client.provider.google.user-info-uri=https://www.googleapis.com/oauth2/v3/userinfo

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root' // ✅ Ensures service is available globally
 })
 export class LoginService {
-  private loginUrl = 'http://localhost:8080/api/users/login'; // ✅ Ensure correct API URL
+  private loginUrl = 'http://localhost:8080/api/users/login'; 
 
   constructor(private http: HttpClient) {}
 
@@ -17,7 +17,7 @@ export class LoginService {
     return this.http.post(
       this.loginUrl, 
       { username, password }, 
-      { headers, withCredentials: true } // ✅ Ensure credentials are sent
+      { headers, withCredentials: true } 
     );
   }
 }
