@@ -16,11 +16,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 0  # Fetch full history to prevent merge conflicts
 
       - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
+
+      - name: Pull Latest Changes
+        env:
+          PAT: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git remote set-url origin https://aditya9389:${PAT}@github.com/aditya9389/Projects.git
+          git pull origin main --rebase
 
       - name: Make Changes (Optional)
         run: echo "Auto update at $(date)" >> auto_commit_log.txt
@@ -34,5 +42,4 @@ jobs:
         env:
           PAT: ${{ secrets.PAT_TOKEN }}
         run: |
-          git remote set-url origin https://aditya9389:${PAT}@github.com/aditya9389/Projects.git
           git push origin HEAD:main
