@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Configure Git
         run: |
@@ -29,5 +31,8 @@ jobs:
           git commit -m "Auto commit - $(date)" || echo "No changes to commit"
 
       - name: Push Changes
+        env:
+          PAT: ${{ secrets.PAT_TOKEN }}
         run: |
-          git push https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          git remote set-url origin https://aditya9389:${PAT}@github.com/aditya9389/Projects.git
+          git push origin HEAD:main
