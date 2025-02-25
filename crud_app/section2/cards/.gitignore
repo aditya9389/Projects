@@ -31,7 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-# Ignore application.properties to prevent leaking secrets
-src/main/resources/application.properties
-src/main/resources/fnp-blog-dac13-firebase-adminsdk-fbsvc-32442fc836.json
