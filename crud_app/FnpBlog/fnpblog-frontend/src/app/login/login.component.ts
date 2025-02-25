@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,inject} from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { LoginService } from './login.service';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,8 @@ export class LoginComponent {
      private authService: AuthService 
     ,private loginService: LoginService
     ,private router: Router
-    ,private googleLoginService:GoogleLoginService) {}
+    ,private googleLoginService:GoogleLoginService
+    ) {}
 
   onLogin() {
     this.loginService.login(this.username, this.password).subscribe({
@@ -32,8 +33,8 @@ export class LoginComponent {
         this.authService.saveToken(token);
         console.log('Token saved:', this.authService.getToken());
         console.log('Login successful', response);
-         
         this.goToDashboard();
+
       },
       error: (error) => {
         console.error('Login failed', error);
@@ -47,6 +48,7 @@ export class LoginComponent {
   }
   goToDashboard() {
     this.router.navigate(['/dashboard']); 
+
   }
   goToGoogleReg() {
     this.googleLoginService.googleLogin(); 

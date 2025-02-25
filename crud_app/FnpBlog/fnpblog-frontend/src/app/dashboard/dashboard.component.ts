@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
-
+import { Messaging, getToken } from '@angular/fire/messaging';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule,RouterModule]
 })
 export class DashboardComponent {
+  messaging=inject(Messaging);
   notes: any[] = [];
   notesFetched = false; // To track if notes were fetched
 
@@ -39,13 +40,23 @@ export class DashboardComponent {
         this.notesFetched = false; // Prevent infinite loading
       }
     );
+    this.requestPermission();
   }
 
   logout() {
     this.authservice.removeToken();
     this.router.navigate(['/login']);
+    console.log("token :"+ this.authservice.getToken());
   }
     createNote(){
       this.router.navigate(['/createNote']);
     }
+    requestPermission() {
+        getToken(this.messaging, {
+          vapidKey: "BFtXckS1N_bWq2efccLBoSvPiKd2Ccw7Kw54hIOpF4GBYCPpDmnTJrcrwhQ9jSk_dmA5fcQO1hhkAEaQjm65SiM"
+        }).then(token => {
+          console.log("FCM Token:", token);
+        }).catch(err => {
+          console.error("Error getting FCM token", err);
+        });}
 }

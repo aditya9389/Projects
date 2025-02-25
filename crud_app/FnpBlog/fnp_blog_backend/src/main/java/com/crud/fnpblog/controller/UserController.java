@@ -5,9 +5,13 @@ import com.crud.fnpblog.dto.LoginRequest;
 import com.crud.fnpblog.dto.UpdatePasswordRequest;
 import com.crud.fnpblog.model.User;
 import com.crud.fnpblog.repository.UserRepository;
+import com.crud.fnpblog.services.FcmService;
 import com.crud.fnpblog.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -19,6 +23,9 @@ import java.util.Optional;
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class UserController {
+
+    @Autowired
+    private FcmService fcmService;
 
     private final UserRepository userRepository;
     private final UserService userService;
@@ -48,4 +55,20 @@ public class UserController {
         userService.deleteUser(userId);
         return ResponseEntity.ok("User deleted successfully!");
     }
+
+
+    @PostMapping("/sendNotif")
+    public ResponseEntity<String> sendNotification(@RequestBody Map<String, String> request) {
+        String title = request.get("title");
+        String body = request.get("body");
+        String token = request.get("token");
+
+        if (title == null || body == null || token == null) {
+            return ResponseEntity.badRequest().body("Missing title, body, or token.");
+        }
+
+        String response = fcmService.sendNotification(title, body, token);
+        return ResponseEntity.ok(response);
+    }
+
 }

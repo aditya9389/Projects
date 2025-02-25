@@ -42,7 +42,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/users/register", "/api/users/login", "/api/notes/createNote").permitAll()
+                        .requestMatchers("/api/users/register", "/api/users/login", "/api/notes/createNote","/api/users/sendNotif").permitAll()
                         .requestMatchers("/oauth2/**", "/login/oauth2/**").permitAll() // Allow Google OAuth2 endpoints
                         .anyRequest().authenticated()
                 )
