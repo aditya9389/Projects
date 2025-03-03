@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -20,14 +19,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author Eazy Bytes
- */
-
-@Tag(
-        name = "CRUD REST APIs for Accounts in EazyBank",
-        description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH AND DELETE account details"
-)
 @RestController
 @RequestMapping(path="/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @AllArgsConstructor
@@ -38,7 +29,7 @@ public class AccountsController {
 
     @Operation(
             summary = "Create Account REST API",
-            description = "REST API to create new Customer &  Account inside EazyBank"
+            description = "REST API to create new Customer &  Account "
     )
     @ApiResponses({
             @ApiResponse(
