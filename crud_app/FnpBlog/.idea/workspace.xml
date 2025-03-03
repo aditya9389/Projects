@@ -4,55 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57552389-7a2f-47b0-99be-758e32f77da0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/DockerFile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.config.server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/app.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/create-note/create-note.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/dashboard/dashboard.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/googleLogin.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/login/login.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/register/register.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/services/auth.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/app/services/auth.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/main.server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/fnp-blog-frontend/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+    <list default="true" id="57552389-7a2f-47b0-99be-758e32f77da0" name="Changes" comment="google login">
+      <change afterPath="$PROJECT_DIR$/fnp_blog_backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fnp_blog_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fnp_blog_backend/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +91,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="google login" />

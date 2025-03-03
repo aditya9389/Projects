@@ -126,6 +126,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>fnp-blog</finalName>
+
 	</build>
 
 </project>
