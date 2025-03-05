@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57552389-7a2f-47b0-99be-758e32f77da0" name="Changes" comment="google login">
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/OneForAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/repository/AddressRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/repository/AllRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/eventlistner/DataChangeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/eventlistner/DataChangeEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/eventlistner/EntityChangeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mergetable/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mergetable/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../mergetable/src/main/java/com/table/merge/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
