@@ -8,6 +8,7 @@ import com.table.merge.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
@@ -21,7 +22,8 @@ public class DataChangeEventListener {
     @Autowired
     private AllRepository allRepository;
 
-
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void handleDataChangeEvent(DataChangeEvent event) {
         System.out.println("-----------checking event is there or not-----------");
         if (event != null && "CREATE".equals(event.getAction())) {
@@ -29,7 +31,7 @@ public class DataChangeEventListener {
         }
     }
 
-    @Transactional
+
     private void handleCreate(DataChangeEvent event) {
         System.out.println("-----------checking data is there in the event or not-----------");
         if (event.getData() == null) {
@@ -60,7 +62,7 @@ public class DataChangeEventListener {
                 System.out.println(e.getMessage());
             }
         }
-        else if (event.getTable().equals("address")) {
+        else if(event.getTable().equals("Address")) {
             System.out.println("-----------getting user data from all to put address-----------");
             Address address= (Address) event.getData();
             OneForAll consolidated = allRepository.findByUserId(address.getUserId())
