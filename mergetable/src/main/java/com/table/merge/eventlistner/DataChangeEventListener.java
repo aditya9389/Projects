@@ -21,7 +21,7 @@ public class DataChangeEventListener {
     @Autowired
     private AllRepository allRepository;
 
-    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+
     public void handleDataChangeEvent(DataChangeEvent event) {
         System.out.println("-----------checking event is there or not-----------");
         if (event != null && "CREATE".equals(event.getAction())) {
