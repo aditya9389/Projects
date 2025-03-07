@@ -17,6 +17,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     private final UserRepository userRepository;
 
     public CustomUserDetailsService(UserRepository userRepository) {
+        System.out.println("------------in CustomUserDetailsService constructor to make userRepo instance----------");
         this.userRepository = userRepository;
     }
 

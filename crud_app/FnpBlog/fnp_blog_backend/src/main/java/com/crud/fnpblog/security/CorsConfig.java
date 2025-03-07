@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
+        System.out.println("------------into corsconfigurer method of CorsConfig class  which returns allowed paths to localhost:4200----------");
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {

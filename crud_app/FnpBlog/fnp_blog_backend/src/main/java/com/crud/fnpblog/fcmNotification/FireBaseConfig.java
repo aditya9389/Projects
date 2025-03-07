@@ -13,6 +13,7 @@ public class FireBaseConfig {
 
     @Bean
     public FirebaseApp firebaseApp() throws IOException {
+        System.out.println("------------into FireBaseconfig to initialize firebase with firebase admin sdk----------");
         FileInputStream serviceAccount =
                 new FileInputStream("src/main/resources/fnp-blog-dac13-firebase-adminsdk-fbsvc-32442fc836.json");
 
@@ -21,5 +22,6 @@ public class FireBaseConfig {
                 .build();
 
         return FirebaseApp.initializeApp(options);
+
     }
 }

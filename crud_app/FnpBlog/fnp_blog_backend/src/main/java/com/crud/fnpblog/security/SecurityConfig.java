@@ -33,11 +33,13 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+        System.out.println("------------returning new BcryptPasswordEncoder----------");
         return new BCryptPasswordEncoder();
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        System.out.println("------------into securityFilterChain method of SecurityConfig----------");
         http
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
@@ -53,12 +55,14 @@ public class SecurityConfig {
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
+        System.out.println("------------SecurityFilterChain method did its work now it will return http build----------");
         return http.build();
     }
 
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
+        System.out.println("------------into corsConfigurationSourse method of Security method who returns allowed sources----------");
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("http://localhost:4200"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
@@ -72,6 +76,7 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationManager authenticationManager(PasswordEncoder passwordEncoder) {
+        System.out.println("------------into Authenticationmanager method of SecurityConfig who returns new providerManager----------");
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder);

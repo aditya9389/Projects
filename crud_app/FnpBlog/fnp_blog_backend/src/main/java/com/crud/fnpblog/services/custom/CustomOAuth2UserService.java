@@ -23,34 +23,37 @@ import java.util.Optional;
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private final UserRepository userRepository;
     private final GoogleService googleService;
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
 
+        System.out.println("------------into loadUser method of CustomOAuth2UserService class----------");
+        System.out.println("------------making new OAuth2User object by OAuth2UserRequest object got through argument----------");
         OAuth2User user = super.loadUser(userRequest);
         String email = user.getAttribute("email");
         String name = user.getAttribute("name");
-
+        System.out.println("------------took email and name out of OAuth2User,generated random pass ----------");
         String randomPassword = "RandomPasswordForGoogleLogin";
 
         Optional<User> existingUser = userRepository.findByUsername(email);
         if (existingUser.isEmpty()) {
-            // Register the user if not already present
+            System.out.println("------------registering new user with data got by email login----------");
             User newUser = new User();
             newUser.setEmpId(name);
             newUser.setUsername(email);
             newUser.setPassword(randomPassword);
+            System.out.println("------------data is passed to googleService.registerUser----------");
             googleService.registerUser(newUser);
         }
 
+        System.out.println("------------in AuthResponse var calling googleService.loginUser with email,randomPass----------");
         AuthResponse authResponse = googleService.loginUser(email, randomPassword);
-
-        // Create a new attributes map to include token
+        System.out.println("------------got token in AuthResponse----------");
+        System.out.println("------------creating a new attribute map to put user attributes and token---------");
         Map<String, Object> attributes = new HashMap<>(user.getAttributes());
         attributes.put("token", authResponse.getToken()); // Adding JWT token
 
-        // Return OAuth2User with necessary attributes and token
+        System.out.println("------------Return OAuth2User with necessary attributes and token----------");
         return new DefaultOAuth2User(
                 user.getAuthorities(),
                 attributes,
