@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FnpblogApplication {
 
 	public static void main(String[] args) {
+		System.out.println("------------running fnp blog app----------");
 		SpringApplication.run(FnpblogApplication.class, args);
 	}
 

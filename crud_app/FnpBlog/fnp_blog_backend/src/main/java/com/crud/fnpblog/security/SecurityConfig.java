@@ -33,7 +33,7 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        System.out.println("------------returning new BcryptPasswordEncoder----------");
+        System.out.println("------------returning new BcryptPasswordEncoder in SecurityConfig----------");
         return new BCryptPasswordEncoder();
     }
 

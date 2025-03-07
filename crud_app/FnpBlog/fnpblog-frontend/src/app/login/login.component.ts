@@ -26,12 +26,14 @@ export class LoginComponent {
     ) {}
 
     ngOnInit(): void {
+      
       if(this.authService.getToken())
         {
           console.log('Already logged in with token:', this.authService.getToken());
           alert('Already logged in');
             this.goToDashboard();
         }
+        this.googleLoginService.handleLoginRedirect();
     }
   onLogin() {
     this.loginService.login(this.username, this.password).subscribe({

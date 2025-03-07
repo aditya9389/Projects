@@ -9,6 +9,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
+@RequiredArgsConstructor
 @AllArgsConstructor
 @Table(name = "notes")
 public class Note {

@@ -20,18 +20,22 @@ public class GoogleService  {
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     public GoogleService(@Lazy AuthenticationManager authenticationManager, JwtUtil jwtUtil, UserRepository userRepository) {
+        System.out.println("------------in GoogleService constructor----------");
         this.authenticationManager = authenticationManager;
         this.jwtUtil = jwtUtil;
         this.userRepository = userRepository;
     }
 
     public void registerUser(User user) {
+        System.out.println("------------in registerUser method of GooGleService----------");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        System.out.println("------------saving user in database----------");
         userRepository.save(user);
     }
 
     public AuthResponse loginUser(String username, String password) {
 
+        System.out.println("------------in userLogin method of googleService----------");
         //Authenticate user using Spring Security
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 

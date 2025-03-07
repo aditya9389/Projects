@@ -20,32 +20,42 @@ public class UserService  {
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     public User registerUser(User user) {
+        System.out.println("------------in registerUser method of userService----------");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        System.out.println("------------creating new user in database----------");
         return userRepository.save(user);
     }
 
     public AuthResponse loginUser(String username, String password) {
 
-        //Authenticate user using Spring Security
+        System.out.println("------------in userLogin method of userService----------");
+        System.out.println("------------Authenticate user using Spring Security----------");
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 
+        System.out.println("------------searching user in database----------");
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-        //Generate JWT Token
+        System.out.println("------------calling jwtUtil.generatoken to get new token----------");
         String token = jwtUtil.generateToken(user.getUsername());
 
+        System.out.println("------------returning new AuthResponse containing new token----------");
         return new AuthResponse(token);
     }
 
     public void updatePassword(Long userId, String newPassword) {
+        System.out.println("------------in update method of userService----------");
+        System.out.println("------------checking if user there or not to update----------");
         User user = userRepository.findByUserId(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
+        System.out.println("------------setting new password----------");
         user.setPassword(passwordEncoder.encode(newPassword));
+        System.out.println("------------updating user details in database----------");
         userRepository.save(user);
     }
 
     public void deleteUser(Long userId) {
+        System.out.println("------------in deleteUser method of userService----------");
         userRepository.deleteById(userId);
     }
 }

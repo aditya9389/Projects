@@ -21,7 +21,9 @@ public class GoogleController implements AuthenticationSuccessHandler {
         Map<String, Object> attributes = token.getPrincipal().getAttributes();
 
         String jwtToken = (String) attributes.get("token");
-        response.sendRedirect("http://localhost:4200/dashboard" );
+
+        String redirectUrl = "http://localhost:4200/login?token=" + jwtToken;
+        response.sendRedirect(redirectUrl);
         System.out.println("------------Google Controller Accessed----------");
     }
 }
