@@ -6,7 +6,11 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@AllArgsConstructor  //I replaced constructor with this
 public class AuthResponse {
+    public AuthResponse(String token)
+    {
+        System.out.println("------------into AuthResponse dto to save token in instance----------");
+        this.token=token;
+    }
     private String token;
 }

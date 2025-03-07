@@ -6,8 +6,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class LoginRequest {
+    public LoginRequest(String username,String password)
+    {
+        System.out.println("------------into LoginRequest dto to save username,password in an instance----------");
+        this.username=username;
+        this.password=password;
+    }
     private String username;
     private String password;
 }

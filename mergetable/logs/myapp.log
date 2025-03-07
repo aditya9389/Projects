@@ -1,0 +1,138 @@
+2025-03-07T12:12:44.305+05:30  INFO 14196 --- [merge] [main] com.table.merge.MergeApplication         : Starting MergeApplication using Java 23.0.1 with PID 14196 (D:\Projects\mergetable\target\classes started by Prata in D:\Projects\mergetable)
+2025-03-07T12:12:44.309+05:30 DEBUG 14196 --- [merge] [main] com.table.merge.MergeApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-07T12:12:44.311+05:30  INFO 14196 --- [merge] [main] com.table.merge.MergeApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T12:12:45.258+05:30  INFO 18248 --- [merge] [main] com.table.merge.MergeApplication         : Starting MergeApplication using Java 23.0.1 with PID 18248 (D:\Projects\mergetable\target\classes started by Prata in D:\Projects\mergetable)
+2025-03-07T12:12:45.262+05:30 DEBUG 18248 --- [merge] [main] com.table.merge.MergeApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-07T12:12:45.263+05:30  INFO 18248 --- [merge] [main] com.table.merge.MergeApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T12:12:46.083+05:30  INFO 14196 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-07T12:12:46.236+05:30  INFO 14196 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 3 JPA repository interfaces.
+2025-03-07T12:12:46.704+05:30  INFO 18248 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-07T12:12:46.879+05:30  INFO 18248 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 3 JPA repository interfaces.
+2025-03-07T12:12:47.615+05:30  INFO 14196 --- [merge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-07T12:12:47.647+05:30  INFO 14196 --- [merge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T12:12:47.648+05:30  INFO 14196 --- [merge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T12:12:47.794+05:30  INFO 14196 --- [merge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T12:12:47.795+05:30  INFO 14196 --- [merge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3385 ms
+2025-03-07T12:12:48.014+05:30  INFO 18248 --- [merge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-07T12:12:48.041+05:30  INFO 18248 --- [merge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T12:12:48.041+05:30  INFO 18248 --- [merge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T12:12:48.150+05:30  INFO 18248 --- [merge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T12:12:48.151+05:30  INFO 18248 --- [merge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2796 ms
+2025-03-07T12:12:48.187+05:30  INFO 14196 --- [merge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-07T12:12:48.382+05:30  INFO 14196 --- [merge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-07T12:12:48.489+05:30  INFO 14196 --- [merge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-07T12:12:48.517+05:30  INFO 18248 --- [merge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-07T12:12:48.611+05:30  INFO 18248 --- [merge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-07T12:12:48.668+05:30  INFO 18248 --- [merge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-07T12:12:49.107+05:30  INFO 14196 --- [merge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-07T12:12:49.169+05:30  INFO 14196 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-07T12:12:49.178+05:30  INFO 18248 --- [merge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-07T12:12:49.236+05:30  INFO 18248 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-07T12:12:50.087+05:30  INFO 14196 --- [merge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@727dcc64
+2025-03-07T12:12:50.087+05:30  INFO 18248 --- [merge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50f3ba6a
+2025-03-07T12:12:50.091+05:30  INFO 14196 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-07T12:12:50.091+05:30  INFO 18248 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-07T12:12:50.264+05:30  WARN 18248 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-07T12:12:50.264+05:30  WARN 14196 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-07T12:12:50.266+05:30  WARN 18248 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-07T12:12:50.266+05:30  WARN 14196 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-07T12:12:50.317+05:30  INFO 14196 --- [merge] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-07T12:12:50.327+05:30  INFO 18248 --- [merge] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-07T12:12:51.938+05:30  INFO 14196 --- [merge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-07T12:12:51.944+05:30  INFO 18248 --- [merge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-07T12:12:52.027+05:30  INFO 14196 --- [merge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:12:52.027+05:30  INFO 18248 --- [merge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:12:53.402+05:30  WARN 14196 --- [merge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-07T12:12:53.510+05:30  WARN 18248 --- [merge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-07T12:12:54.411+05:30  WARN 14196 --- [merge] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-07T12:12:54.417+05:30  INFO 14196 --- [merge] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:12:54.423+05:30  INFO 14196 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-07T12:12:54.449+05:30  INFO 18248 --- [merge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-07T12:12:54.473+05:30  INFO 18248 --- [merge] [main] com.table.merge.MergeApplication         : Started MergeApplication in 10.202 seconds (process running for 11.162)
+2025-03-07T12:12:54.503+05:30  INFO 14196 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-07T12:12:54.526+05:30  INFO 14196 --- [merge] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-07T12:12:54.556+05:30 ERROR 14196 --- [merge] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-07T12:13:50.539+05:30  INFO 18248 --- [merge] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-07T12:13:50.549+05:30  INFO 18248 --- [merge] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-07T12:13:50.553+05:30  INFO 18248 --- [merge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:13:50.557+05:30  INFO 18248 --- [merge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-07T12:13:50.573+05:30  INFO 18248 --- [merge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-07T12:13:53.576+05:30  INFO 21020 --- [merge] [main] com.table.merge.MergeApplication         : Starting MergeApplication using Java 23.0.1 with PID 21020 (D:\Projects\mergetable\target\classes started by Prata in D:\Projects\mergetable)
+2025-03-07T12:13:53.579+05:30 DEBUG 21020 --- [merge] [main] com.table.merge.MergeApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-07T12:13:53.580+05:30  INFO 21020 --- [merge] [main] com.table.merge.MergeApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T12:13:54.595+05:30  INFO 21020 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-07T12:13:54.680+05:30  INFO 21020 --- [merge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2025-03-07T12:13:55.748+05:30  INFO 21020 --- [merge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-07T12:13:55.774+05:30  INFO 21020 --- [merge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T12:13:55.775+05:30  INFO 21020 --- [merge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T12:13:55.872+05:30  INFO 21020 --- [merge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T12:13:55.873+05:30  INFO 21020 --- [merge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2211 ms
+2025-03-07T12:13:56.143+05:30  INFO 21020 --- [merge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-07T12:13:56.213+05:30  INFO 21020 --- [merge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-07T12:13:56.262+05:30  INFO 21020 --- [merge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-07T12:13:56.589+05:30  INFO 21020 --- [merge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-07T12:13:56.629+05:30  INFO 21020 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-07T12:13:57.144+05:30  INFO 21020 --- [merge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f541e67
+2025-03-07T12:13:57.147+05:30  INFO 21020 --- [merge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-07T12:13:57.203+05:30  WARN 21020 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-07T12:13:57.205+05:30  WARN 21020 --- [merge] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-07T12:13:57.237+05:30  INFO 21020 --- [merge] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-07T12:13:58.185+05:30  INFO 21020 --- [merge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-07T12:13:58.251+05:30  INFO 21020 --- [merge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:13:58.800+05:30  WARN 21020 --- [merge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-07T12:13:59.361+05:30  INFO 21020 --- [merge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-07T12:13:59.371+05:30  INFO 21020 --- [merge] [main] com.table.merge.MergeApplication         : Started MergeApplication in 6.722 seconds (process running for 7.868)
+2025-03-07T12:14:33.718+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-07T12:14:33.718+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-07T12:14:33.720+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-07T12:14:33.903+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] com.table.merge.services.UserService     : -----------creating user-----------
+2025-03-07T12:14:34.105+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------checking event is there or not-----------
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------checking data is there in the event or not-----------
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------if data is there getting all that and putting in all table-----------
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------user username----------->aditya
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------user empId----------->adii123
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------user PhoneNumber----------->9389609121
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------user userId----------->1
+2025-03-07T12:14:34.106+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----------creating all table-----------
+2025-03-07T12:14:34.121+05:30  INFO 21020 --- [merge] [http-nio-8080-exec-1] c.t.m.e.DataChangeEventListener          : -----entry in oneforall is done:--->com.table.merge.Model.OneForAll@5a5850e
+2025-03-07T12:15:27.338+05:30  INFO 21020 --- [merge] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-07T12:15:27.345+05:30  INFO 21020 --- [merge] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-07T12:15:27.349+05:30  INFO 21020 --- [merge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T12:15:27.351+05:30  INFO 21020 --- [merge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-07T12:15:27.362+05:30  INFO 21020 --- [merge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

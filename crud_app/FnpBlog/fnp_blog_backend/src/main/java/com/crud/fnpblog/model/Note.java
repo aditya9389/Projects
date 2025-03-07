@@ -13,7 +13,6 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "notes")
 public class Note {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long noteId;

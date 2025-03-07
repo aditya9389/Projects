@@ -16,11 +16,12 @@ public class GoogleController implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+        System.out.println("------------Google Controller getting Accessed----------");
         OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
         Map<String, Object> attributes = token.getPrincipal().getAttributes();
 
         String jwtToken = (String) attributes.get("token");
-
-        response.sendRedirect("http://localhost:4200/login" );
+        response.sendRedirect("http://localhost:4200/dashboard" );
+        System.out.println("------------Google Controller Accessed----------");
     }
 }

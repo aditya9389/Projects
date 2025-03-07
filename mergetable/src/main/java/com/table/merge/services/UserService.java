@@ -8,11 +8,11 @@ import com.table.merge.repository.AllRepository;
 import com.table.merge.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.event.TransactionPhase;
-import org.springframework.transaction.event.TransactionalEventListener;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -27,36 +27,36 @@ public class UserService {
     public User createUser(User user)
     {
 //        OneForAll oneforall = this.createAll(user);
-        System.out.println("-----------creating user-----------");
+        log.info("-----------creating user-----------");
         return userRepository.save(user);
     }
     @Transactional
     public Address createAddress(Address address)
     {
 //        OneForAll oneForAll = this.createAll(address);
-        System.out.println("--------creating address---------");
+        log.info("--------creating address---------");
         return addressRepository.save(address);
     }
 
     public OneForAll createAll(User user)
     {
-        System.out.println("--------getting date from user table for all table--------");
+        log.info("--------getting date from user table for all table--------");
         OneForAll oneForALl=new OneForAll();
         oneForALl.setUsername(user.getUsername());
         oneForALl.setUserId(user.getUserId());
         oneForALl.setEmpId(user.getEmpId());
         oneForALl.setPhoneNumber(user.getPhoneNumber());
-        System.out.println("--------creating all table with user data---------");
+        log.info("--------creating all table with user data---------");
         return allRepository.save(oneForALl);
     }
     public OneForAll createAll(Address address)
     {
-        System.out.println("--------getting user data from all table to put address---------");
+        log.info("--------getting user data from all table to put address---------");
         OneForAll oneForAll=allRepository.findByUserId(address.getUserId())
                 .orElseThrow(()->new RuntimeException("--------user not found to register this address--------"));
         oneForAll.setPlace(address.getPlace());
         oneForAll.setAltNumber(address.getAltNumber());
-        System.out.println("---------updating all data----------");
+        log.info("---------updating all data----------");
         return allRepository.save(oneForAll);
     }
 }
