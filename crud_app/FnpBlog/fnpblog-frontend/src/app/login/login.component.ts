@@ -60,7 +60,7 @@ export class LoginComponent {
     this.router.navigate(['/dashboard']); 
 
   }
-  goToGoogleReg() {
+  goToGoogleLogin() {
     this.googleLoginService.googleLogin(); 
   }
 }

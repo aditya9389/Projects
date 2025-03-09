@@ -40,10 +40,21 @@ export class DashboardComponent {
         this.notesFetched = false; // Prevent infinite loading
       }
     );
-    this.requestPermission();
+    this.requestPermission(); //for getting req to send notifcation
   }
 
   logout() {
+    const token =this.authservice.getToken();
+    this.http.get('http://localhost:8080/api/logout', {
+      headers: { Authorization: `Bearer ${token}` }
+    }).subscribe(
+      (response: any) => {
+        console.log('Logged out successfully', response);
+      },
+      error => {
+        console.error('Error logging out', error);
+      }
+    );
     this.authservice.removeToken();
     this.router.navigate(['/login']);
     console.log("token :"+ this.authservice.getToken());

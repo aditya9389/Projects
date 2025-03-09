@@ -18,6 +18,7 @@ public class UserService  {
     private final JwtUtil jwtUtil;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private final RedisService redisService;
 
     public User registerUser(User user) {
         System.out.println("------------in registerUser method of userService----------");
@@ -38,7 +39,7 @@ public class UserService  {
 
         System.out.println("------------calling jwtUtil.generatoken to get new token----------");
         String token = jwtUtil.generateToken(user.getUsername());
-
+        redisService.saveToken("authToken:"+username,token);
         System.out.println("------------returning new AuthResponse containing new token----------");
         return new AuthResponse(token);
     }

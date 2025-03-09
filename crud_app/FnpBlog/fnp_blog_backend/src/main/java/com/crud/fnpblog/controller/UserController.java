@@ -5,7 +5,9 @@ import com.crud.fnpblog.dto.LoginRequest;
 import com.crud.fnpblog.dto.UpdatePasswordRequest;
 import com.crud.fnpblog.model.User;
 import com.crud.fnpblog.repository.UserRepository;
+import com.crud.fnpblog.security.JwtUtil;
 import com.crud.fnpblog.services.FcmService;
+import com.crud.fnpblog.services.RedisService;
 import com.crud.fnpblog.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,9 @@ public class UserController {
 
     private final UserRepository userRepository;
     private final UserService userService;
+    private JwtUtil jwtUtil;
+    @Autowired
+    private RedisService redisService;
 
 
     @PostMapping(value = "/register", consumes = "application/json;charset=UTF-8")
@@ -68,5 +73,15 @@ public class UserController {
         String response = fcmService.sendNotification(title, body, token);
         return ResponseEntity.ok(response);
     }
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(@RequestHeader("Authorization") String authHeader) {
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            String token = authHeader.substring(7);
+            String username = jwtUtil.extractUsername(token);
+            redisService.deleteToken(username);  // Remove token from Redis
+        }
+        return ResponseEntity.ok("Logged out successfully!");
+    }
+
 
 }
